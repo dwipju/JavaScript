@@ -13,3 +13,7 @@ console.log(myString.slice(-1,5)) //we can't use -ve value in substring method.
 console.log(myString2.trim())     //removes extra space. there is trimStart() and trimEnd() too.
 console.log(myUrl.replace('%20','-'))
 console.log(myUrl.includes('dwip'))
+
+//split(separator,limit)
+let newString="dwip-bauri-jnv-ju-samsung-google"
+console.log(newString.split('-'))
