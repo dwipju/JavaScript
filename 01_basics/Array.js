@@ -14,6 +14,25 @@ In JS all built in copy functions like slice, from they make shallow copies.
 
 const ingredientsList = ["noodles", { list: ["eggs", "flour", "water"] }];
 const myCopy=Array.from(ingredientsList)
-console.log(myCopy)
-myCopy[1].list=[1,2,3]
+// console.log(myCopy)
+// myCopy[1].list=[1,2,3]
+
+const myDeepCopy=JSON.parse(JSON.stringify(ingredientsList))
+// console.log(myDeepCopy,',,,')
+// myDeepCopy[1].list=[1,2,3]
+// console.log(myDeepCopy)
+// console.log(ingredientsList)
+const colors = ["red", "yellow", "blue"];
+colors[5] = "purple";
+colors.reverse(); // ['purple', empty × 2, 'blue', 'yellow', 'red']
+
+colors.forEach((item, index) => {
+  console.log(`${index}: ${item}`);
+});
+// Output:
+// 0: red
+// 1: yellow
+// 2: blue
+// 5: purple
+
 
